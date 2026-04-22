@@ -2,99 +2,110 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Abhishek ( Cricket Tips )</title>
+<title>Abhishek Cricket Tips</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<!-- Confetti -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<!-- 🔥 Paste Meta Pixel Code Here -->
+
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap');
-*{font-family:Poppins;}
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
 
 body{
-min-height:100vh;
-background:linear-gradient(135deg,#020024,#090979,#00d4ff);
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
+  min-height:100vh;
+  background:linear-gradient(135deg,#020024,#090979,#00d4ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .glass{
-background:rgba(0,0,0,0.55);
-backdrop-filter:blur(20px);
-border-radius:25px;
-padding:25px;
-width:100%;
-max-width:420px;
-box-shadow:0 0 50px cyan,0 0 120px magenta;
-border:2px solid rgba(255,255,255,.2);
-text-align:center;
-animation:float 5s ease-in-out infinite;
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(20px);
+  border-radius:25px;
+  padding:25px;
+  width:100%;
+  max-width:420px;
+  box-shadow:0 0 40px cyan,0 0 80px magenta;
+  border:2px solid rgba(255,255,255,.2);
+  text-align:center;
+  animation:float 5s ease-in-out infinite;
 }
 
 @keyframes float{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(-10px)}
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
 }
 
 .badge{
-background:linear-gradient(90deg,#00ffcc,#ff00ff);
-padding:6px 18px;
-border-radius:50px;
-font-weight:bold;
-color:black;
-display:inline-block;
-margin-top:12px;
-animation:blink 1.5s infinite;
+  background:linear-gradient(90deg,#00ffcc,#ff00ff);
+  padding:6px 18px;
+  border-radius:50px;
+  font-weight:bold;
+  color:black;
+  display:inline-block;
+  margin-top:12px;
+  animation:blink 1.5s infinite;
 }
 
 @keyframes blink{
-0%,100%{opacity:1}
-50%{opacity:.4}
+  0%,100%{opacity:1}
+  50%{opacity:.4}
 }
 
 .title{
-font-family:Orbitron;
-font-size:32px;
-margin-top:15px;
-background:linear-gradient(90deg,#00ffcc,#ff00ff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+  font-family:'Orbitron', sans-serif;
+  font-size:30px;
+  margin-top:15px;
+  background:linear-gradient(90deg,#00ffcc,#ff00ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 .stats p{
-margin:6px 0;
-font-size:18px;
+  margin:6px 0;
+  font-size:16px;
 }
 
 .join{
-margin-top:20px;
-padding:18px;
-border-radius:15px;
-font-size:20px;
-font-weight:bold;
-background:linear-gradient(135deg,#00ffcc,#ff00ff);
-color:black;
-box-shadow:0 0 25px cyan;
-transition:.3s;
+  margin-top:20px;
+  padding:16px;
+  border-radius:12px;
+  font-size:18px;
+  font-weight:bold;
+  background:linear-gradient(135deg,#00ffcc,#ff00ff);
+  color:black;
+  box-shadow:0 0 20px cyan;
+  transition:0.3s;
 }
 
 .join:hover{
-transform:scale(1.1);
-box-shadow:0 0 50px magenta;
+  transform:scale(1.05);
+  box-shadow:0 0 40px magenta;
 }
 </style>
 </head>
+
 <body>
 
 <div class="glass">
 
 <div class="badge">● LIVE ABHISHEK MATCH TIPS</div>
 
-<h1 class="title">Abhishek ( Cricket Tips )</h1>
+<h1 class="title">Abhishek Cricket Tips</h1>
 <p class="text-yellow-300 tracking-widest mb-3">Premium Cricket Predictions</p>
 
 <div class="stats text-white mb-4">
@@ -104,7 +115,6 @@ box-shadow:0 0 50px magenta;
 <p>👥 Members Joined: <span id="counter" class="text-pink-400">10234</span></p>
 </div>
 
-<!-- Updated Telegram Channel Link -->
 <a href="https://t.me/+DTCaOtsNVDs5ZGY1" target="_blank" class="join block">
 <i class="fab fa-telegram"></i> JOIN TELEGRAM CHANNEL
 </a>
@@ -114,23 +124,29 @@ box-shadow:0 0 50px magenta;
 </div>
 
 <script>
-confetti({particleCount:200,spread:100});
+// Confetti effect
+confetti({
+  particleCount:150,
+  spread:90
+});
 
-let count=10234;
+// Counter animation
+let count = 10234;
 setInterval(()=>{
-count++;
-document.getElementById("counter").innerText=count;
-},2500);
+  count++;
+  document.getElementById("counter").innerText = count;
+}, 3000);
 
-let sec=50;
-let timer=setInterval(()=>{
-document.getElementById("redirectText").innerText="Redirecting in "+sec+" seconds...";
-sec--;
-if(sec<0){
-clearInterval(timer);
-// Redirecting to updated channel
-window.location.href="https://t.me/+DTCaOtsNVDs5ZGY1";
-}
+// Redirect timer
+let sec = 30;
+let timer = setInterval(()=>{
+  document.getElementById("redirectText").innerText = "Redirecting in " + sec + " seconds...";
+  sec--;
+
+  if(sec < 0){
+    clearInterval(timer);
+    window.location.href = "https://t.me/+DTCaOtsNVDs5ZGY1";
+  }
 },1000);
 </script>
 
