@@ -1,177 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Abhishek Cricket Tips</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek (tips 2021) - Join Now</title>
+    <style>
+        /* General Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        
+        body {
+            background: radial-gradient(circle at top, #004d40 0%, #001a1a 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 20px;
+        }
 
-<!-- ✅ Meta Pixel Code (FIXED) -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+        .card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(15px);
+            border-radius: 40px;
+            padding: 50px 25px;
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        }
 
-fbq('init', '1248004800164055');
-fbq('track', 'PageView');
-fbq('track', 'ViewContent'); // 🔥 extra tracking
-</script>
+        /* Profile Image Setup */
+        .profile-container {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 25px;
+            position: relative;
+        }
 
-<!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com"></script>
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #00c853;
+            box-shadow: 0 0 15px rgba(0, 200, 83, 0.4);
+        }
 
-<!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        h1 { font-size: 22px; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; }
+        
+        .tagline { font-size: 14px; color: #cfd8dc; margin-bottom: 35px; line-height: 1.6; }
 
-<!-- Confetti -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        .timer { font-size: 16px; margin-bottom: 25px; font-weight: 500; }
+        .timer span { color: #00c853; font-weight: 700; font-size: 18px; }
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap');
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #00c853;
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 10px 20px rgba(0, 200, 83, 0.3);
+            transition: all 0.3s ease;
+            margin-bottom: 35px;
+        }
 
-*{font-family:'Poppins',sans-serif;}
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(0, 200, 83, 0.5); }
 
-body{
-min-height:100vh;
-background:linear-gradient(135deg,#020024,#090979,#00d4ff);
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.glass{
-background:rgba(0,0,0,0.55);
-backdrop-filter:blur(20px);
-border-radius:25px;
-padding:25px;
-width:100%;
-max-width:420px;
-box-shadow:0 0 40px cyan,0 0 80px magenta;
-border:2px solid rgba(255,255,255,.2);
-text-align:center;
-animation:float 5s ease-in-out infinite;
-}
-
-@keyframes float{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(-10px)}
-}
-
-.badge{
-background:linear-gradient(90deg,#00ffcc,#ff00ff);
-padding:6px 18px;
-border-radius:50px;
-font-weight:bold;
-color:black;
-display:inline-block;
-margin-top:12px;
-animation:blink 1.5s infinite;
-}
-
-@keyframes blink{
-0%,100%{opacity:1}
-50%{opacity:.4}
-}
-
-.title{
-font-family:'Orbitron',sans-serif;
-font-size:30px;
-margin-top:15px;
-background:linear-gradient(90deg,#00ffcc,#ff00ff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.stats p{
-margin:6px 0;
-font-size:16px;
-}
-
-.join{
-margin-top:20px;
-padding:16px;
-border-radius:12px;
-font-size:18px;
-font-weight:bold;
-background:linear-gradient(135deg,#00ffcc,#ff00ff);
-color:black;
-box-shadow:0 0 20px cyan;
-transition:0.3s;
-}
-
-.join:hover{
-transform:scale(1.05);
-box-shadow:0 0 40px magenta;
-}
-</style>
+        .disclaimer {
+            font-size: 12px;
+            color: #90a4ae;
+            line-height: 1.6;
+            border-top: 1px dashed rgba(255,255,255,0.2);
+            padding-top: 25px;
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- ✅ noscript (IMPORTANT) -->
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1248004800164055&ev=PageView&noscript=1"/>
-</noscript>
+    <div class="card">
+        <div class="profile-container">
+            <!-- Aapki di hui photo yahan linked hai -->
+            <img src="IMG_20260513_030325_631.jpg" alt="Abhishek" class="profile-img">
+        </div>
+        
+        <h1>ABHISHEK (TIPS 2021) 🚩</h1>
+        <p class="tagline">Honest analysis • Match insights •<br>Community driven</p>
 
-<div class="glass">
+        <div class="timer">FREE JOINING ENDS IN <span id="count">15</span>s</div>
 
-<div class="badge">● LIVE ABHISHEK MATCH TIPS</div>
+        <!-- Aapka Telegram Link -->
+        <a href="https://t.me/+G5-Zgp7n44Q4MjE9" class="btn">
+            Subscribe Free Click Now &nbsp; 📲
+        </a>
 
-<h1 class="title">Abhishek (Tips 2021)</h1>
-<p class="text-yellow-300 tracking-widest mb-3">Premium Cricket Predictions</p>
+        <p class="disclaimer">
+            Disclaimer: This channel shares cricket updates, analysis, and general information for fans. It does not promote betting or gambling. No outcomes are guaranteed.
+        </p>
+    </div>
 
-<div class="stats text-white mb-4">
-<p>🏆 IPL 2024 : <span class="text-green-400">68/74 PASS</span></p>
-<p>🔥 IPL 2025 : <span class="text-cyan-300">Free Tips</span></p>
-<p>⭐ 12+ Years Experience</p>
-<p>👥 Members Joined: <span id="counter" class="text-pink-400">10234</span></p>
-</div>
-
-<a id="telegramBtn" href="https://t.me/+G5-Zgp7n44Q4MjE9" target="_blank" class="join block">
-<i class="fab fa-telegram"></i> JOIN TELEGRAM CHANNEL
-</a>
-
-<p id="redirectText" class="text-sm text-red-300 mt-3"></p>
-
-</div>
-
-<script>
-// 🎉 Confetti
-confetti({
-particleCount:150,
-spread:90
-});
-
-// 🔢 Counter
-let count = 10234;
-setInterval(()=>{
-count++;
-document.getElementById("counter").innerText = count;
-},3000);
-
-// ⏳ Redirect
-let sec = 50;
-let timer = setInterval(()=>{
-document.getElementById("redirectText").innerText =
-"Redirecting in " + sec + " seconds...";
-sec--;
-
-if(sec < 0){
-clearInterval(timer);
-window.location.href = "https://t.me/+G5-Zgp7n44Q4MjE9";
-}
-},1000);
-
-// 🔥 TELEGRAM CLICK TRACK (IMPORTANT FOR ADS)
-document.getElementById("telegramBtn").addEventListener("click", function(){
-fbq('track', 'Lead');
-});
-</script>
-
+    <script>
+        let timeLeft = 15;
+        const timerElement = document.getElementById('count');
+        setInterval(() => {
+            if(timeLeft > 0) {
+                timeLeft--;
+                timerElement.innerText = timeLeft;
+            } else {
+                timeLeft = 15; 
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
